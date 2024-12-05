@@ -1,0 +1,48 @@
+cmake_minimum_required(VERSION 3.10)
+project(advent_of_code)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Enable debug symbols and warnings
+if(MSVC)
+    add_compile_options(/W4 /DEBUG)
+else()
+    add_compile_options(-Wall -g)
+endif()
+
+# Create executables for each day
+add_executable(day_1 src/day_1/day_1.cpp)
+target_include_directories(day_1 PRIVATE ${CMAKE_SOURCE_DIR}/src)
+
+add_executable(day_2 src/day_2/day_2.cpp)
+target_include_directories(day_2 PRIVATE ${CMAKE_SOURCE_DIR}/src)
+
+add_executable(day_3 src/day_3/day_3.cpp)
+target_include_directories(day_3 PRIVATE ${CMAKE_SOURCE_DIR}/src)
+
+# Make sure the input directories exist in build
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/inputs/day_1)
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/inputs/day_2)
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/inputs/day_3)
+
+
+# Copy all input files from each day
+file(GLOB DAY1_INPUTS "src/day_1/inputs/*")
+foreach(INPUT_FILE ${DAY1_INPUTS})
+    get_filename_component(FILENAME ${INPUT_FILE} NAME)
+    configure_file(${INPUT_FILE} ${CMAKE_BINARY_DIR}/inputs/day_1/${FILENAME} COPYONLY)
+endforeach()
+
+file(GLOB DAY2_INPUTS "src/day_2/inputs/*")
+foreach(INPUT_FILE ${DAY2_INPUTS})
+    get_filename_component(FILENAME ${INPUT_FILE} NAME)
+    configure_file(${INPUT_FILE} ${CMAKE_BINARY_DIR}/inputs/day_2/${FILENAME} COPYONLY)
+endforeach()
+
+file(GLOB DAY3_INPUTS "src/day_3/inputs/*")
+foreach(INPUT_FILE ${DAY3_INPUTS})
+    get_filename_component(FILENAME ${INPUT_FILE} NAME)
+    configure_file(${INPUT_FILE} ${CMAKE_BINARY_DIR}/inputs/day_3/${FILENAME} COPYONLY)
+endforeach()
