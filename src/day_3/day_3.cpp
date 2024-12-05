@@ -52,7 +52,7 @@ int getTotalMultipliedConditional(std::string fileData) {
 }
 
 int main(void) {
-	std::string fileName = "inputs/day_3/computerInput.txt";
+	std::string fileName = "inputs/day_3_input.txt";
 	std::string data = parse_csv(fileName);
 
 	int totalMulti = getTotalMultiplied(data);

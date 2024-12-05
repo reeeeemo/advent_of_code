@@ -79,7 +79,7 @@ int countSafeDataWithRemovingLevel(std::vector<std::vector<int>>& safetyData) {
 }
 
 int main( void ) {
-	std::string fileName = "inputs/day_2/safetyInput.txt";
+	std::string fileName = "inputs/day_2_input.txt";
 	std::stringstream file_contents(parse_csv(fileName));
 
 	std::string line;

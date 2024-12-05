@@ -57,7 +57,7 @@ int totalSimilarityBtwnLists(std::vector<int>& list_1, std::vector<int>& list_2)
 }
 
 int main ( void ) {
-	std::string fileName = "inputs/day_1/distInput.txt"; 
+	std::string fileName = "inputs/day_1_input.txt"; 
 	std::stringstream file_contents(parse_csv(fileName));
 
 	std::string line;

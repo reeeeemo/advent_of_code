@@ -4,9 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # Inputs
-src/day_1/inputs/*
-src/day_2/inputs/*
-src/day_3/inputs/*
+src/inputs/*
 
 # Anything made by Cmake (build it yourself >:(
 out/*

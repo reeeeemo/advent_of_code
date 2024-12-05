@@ -4,13 +4,13 @@ All of my submissions for AoC. Note that inputs have been omitted.
 
 # How to run
 
-- Create an `/inputs` folder for each `day_#` folder.
+- Create an `/src/inputs` folder.
 - Download your own puzzle inputs, put them in `/inputs`
-- Rename them accordingly, as well as adjust names in the CmakeLists.txt
+- Rename them accordingly *(configured to look for `day_#_input.txt`)*
 
 ##  If using Visual Studio:
 
-- Just open, and run the `day_#.exe`.
+- Just open, build solution, and run the `day_#.exe`.
 
 ## If using CMake directly:
 
