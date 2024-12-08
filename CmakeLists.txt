@@ -22,6 +22,9 @@ target_include_directories(day_2 PRIVATE ${CMAKE_SOURCE_DIR}/src)
 add_executable(day_3 src/day_3/day_3.cpp)
 target_include_directories(day_3 PRIVATE ${CMAKE_SOURCE_DIR}/src)
 
+add_executable(day_4 src/day_4/day_4.cpp)
+target_include_directories(day_4 PRIVATE ${CMAKE_SOURCE_DIR}/src)
+
 
 # Copy all input files from each day
 file(GLOB INPUTS "src/inputs/*")
